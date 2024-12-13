@@ -3,7 +3,6 @@ import sympy as sp
 def main():
     x = sp.symbols('x')
     print("""
-    欢迎使用积分计算器！
     乘用*, 除用/, 加用+, 减用-, 幂用**, 如x**2表示x的平方, 输入括号要是英文括号。
     支持的函数：
     - 三角函数：sin, cos, tan
@@ -18,7 +17,6 @@ def main():
         try:
             mode = input("请选择模式（不定积分输入0，定积分输入1，退出输入q）: ").strip().lower()
             if mode == 'q':
-                print("感谢使用积分计算器，再见！")
                 break
             if mode not in ['0', '1']:
                 raise ValueError("无效的模式选择，请输入0或1.")
